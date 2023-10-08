@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import profile from "../../Assets/profile.png";
 import lightProfile from "../../Assets/lightprofile.png";
-import shape from '../../Assets/graph.png'
 import "./home.css";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { globalContext } from "../GlobalContext/GlobalContext";
 
 function Home() {
