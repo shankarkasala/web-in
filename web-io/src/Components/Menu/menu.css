@@ -18,9 +18,13 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    backdrop-filter: blur(10px); /* Standard syntax */
+    -webkit-backdrop-filter: blur(10px); 
 }
 
 .darkMenu {
     background: #0F0F0F;
     color: #ECECEC;
+    backdrop-filter: blur(10px); /* Standard syntax */
+    -webkit-backdrop-filter: blur(10px);
 }

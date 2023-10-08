@@ -7,11 +7,13 @@ import "./App.css";
 import Menu from "./Components/Menu/Menu";
 import { globalContext } from "./Components/GlobalContext/GlobalContext";
 import Container from "./Components/Container/Container";
-
+import track from './Assets/audio.mp3'
 function App() {
   const {mode,handleDarkmode} = useContext(globalContext)
   const [menu, setMenu] = useState(true);
   const handelMode = () => {
+    let snd = new Audio(track)
+    snd.play()
     handleDarkmode()
   };
   const handelMenu = () => {
@@ -40,10 +42,14 @@ function App() {
             <img className="darkmode" src={day} alt="darkmode" />
           )}
         </div>
-        <div>{!menu && <Menu menu={menu} onChange={setMenu} />}</div>
+        {!menu && <Menu menu={menu} onChange={setMenu} />}
         <div className={`container`}>
             <Container/>
         </div>
+      </div>
+
+      <div className={`footer ${!mode && 'darkFooter'}`}>
+        <div className="copy">&copy; kasala.umasankar</div>
       </div>
     </div>
   );
